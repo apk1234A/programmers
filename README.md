@@ -12,5 +12,6 @@ text
 
 # Java scrept
 
-<p>text</p>
+text
+
 <body bgcolor="#800000">
