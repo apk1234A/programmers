@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div>
+        <body>
+          
 <h1>Python</h1>
 
 <p>text</p>
@@ -15,3 +24,6 @@
 <p>text</p>
 
 <body style="background-color:#33475b">
+    </div>
+</body>
+</html>
