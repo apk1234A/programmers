@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>هوش مصنوعی</title>
+</head>
+<body>
+    <center>
+  <h1>هوش مصنوعی</h1>
+  <p>خوش آمدید! لطفا سؤال خود را وارد کنید</p>
+  
+  <input type="text" id="soal" placeholder="سؤال خود را وارد کنید">
+  <button onclick="send()">بپرس</button>
+  <p id="res"></p>
+</center>
+
+<script>
+function send() {
+  var soal = document.getElementById("soal").value;
+  document.getElementById("res").innerHTML = "کمی صبر کنید...";
+  var xhr = new XMLHttpRequest();
+  var url = "https://mrapiweb.ir/ai/?text=" + encodeURIComponent(soal);
+  xhr.open('GET', url, true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var response = xhr.responseText;
+      document.getElementById("res").innerHTML = response;
+    }
+  };
+  xhr.send();
+}
+</script>
+</body>
+</html>
